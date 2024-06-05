@@ -49,7 +49,7 @@ gradingsystem/
 │
 ├── main.py          # Main script to run the project
 ├── grading.py       # Module for grading logic
-├── tui.py           # Text User Interface
+├── gui.py           # Text User Interface
 ├── utils.py         # Utility functions
 ├── README.md        # Project README
 └── requirements.txt # List of dependencies
@@ -61,7 +61,7 @@ The entry point of the project, which initiates the grading process and user int
 ### grading.py
 Contains the logic for evaluating and grading student assignments.
 
-### tui.py
+### gui.py
 Handles the text-based user interface for user interaction with the grading system.
 
 ### utils.py
