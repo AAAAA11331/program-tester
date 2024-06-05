@@ -17,7 +17,7 @@ This project is a grading system designed to automate the evaluation of student 
 ### Prerequisites
 
 - Python 3.x
-- Required Python packages (listed in `requirements.txt`)
+- Tkinter Library
 
 ### Steps
 
@@ -27,16 +27,12 @@ This project is a grading system designed to automate the evaluation of student 
    ```
 2. Change to the project directory:
    ```sh
-   cd gradingsystem
-   ```
-3. Install the required dependencies:
-   ```sh
-   pip install -r requirements.txt
+   cd program-tester
    ```
 
 ## Usage
 
-To run the grading system, execute the following command:
+To run the grading system, first set up your customized test cases in gui.py then execute the following command:
 
 ```sh
 python main.py
