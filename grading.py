@@ -1,7 +1,7 @@
 import subprocess
 import os
 import re
-from utils import determine_input_mode, parse_binary_output, compare_binary_magnitude, normalize_binary
+from utils import *
 
 def prepare_submission(filename):
     extension = filename.split('.')[-1].lower()
@@ -34,14 +34,15 @@ def run_tests(executable, input_mode, test_cases):
             else:
                 full_command = f"{executable} {input_args}"
                 process = subprocess.run(full_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True, timeout=10)
-            output = parse_binary_output(process.stdout.decode('utf-8').strip())
+            output = process.stdout.decode('utf-8').strip()
             if output and compare_binary_magnitude(output, expected_output):
                 passed_tests += 1
                 print(f"Test Case Passed: {input_args}")
             else:
                 print(f"Test Case Failed: {input_args}")
-        except subprocess.CalledProcessError as e:
-            print(f"Error running test: {e}")
         except subprocess.TimeoutExpired:
-            print("Test case timed out.")
+            print(f"Test Case Timed Out: {input_args}")
+        except Exception as e:
+            print(f"Error occurred while running test case {input_args}: {e}")
     return passed_tests
+
