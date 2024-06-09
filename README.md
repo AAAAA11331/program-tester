@@ -23,7 +23,7 @@ This project is a grading system designed to automate the evaluation of student 
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/gradingsystem.git
+   git clone https://github.com/AAAAA11331/program-tester.git
    ```
 2. Change to the project directory:
    ```sh
